@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Glacor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1100, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/jquery.js"></script>
+	<!--[if IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+		<script src="./js/ie8.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<img src="./img/logo.png" width="228" height="69" alt="">
+			<div>
+				<h5>8 800 2000 650</h5>
+				<button>Запрос коммерческого предложения</button>
+			</div>
+			<ul>
+				<li><a href="#">Каталог продукции</a></li>
+				<li><a href="#">О компании</a></li>
+				<li class="active"><a href="#">Контакты</a></li>
+			</ul>
+		</header>
+		<main>
+			<section class="title">
+				<ul>
+					<li><a href="#">Главная</a></li>
+				</ul>
+				<h1>Контакты</h1>
+			</section>
+			<div id="map">
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+				<script>
+					function initialize() {
+						var mapCanvas = document.getElementById('map');
+						var mapOptions = {
+							center: new google.maps.LatLng(53.332096, 83.749258),
+							zoom: 16,
+							mapTypeId: google.maps.MapTypeId.ROADMAP
+						}
+						var map = new google.maps.Map(mapCanvas, mapOptions);
+						var place = new google.maps.LatLng(53.332096, 83.749258);
+						var mainMarker = new google.maps.Marker({
+							position: place,
+							map: map
+						});
+					}
+					google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+			<div class="content">
+				<div class="about">
+					<h3>ООО НПК «ГЛАКОР»</h3>
+					<p>Научно-производственная компания «ГЛАКОР» является поставщиком и производителем диагностических наборов и реагентов для определения биохимических показателей, а также ряда маркёров системы гемостаза.</p>
+					<ul>
+						<li>
+							<span>
+								<img src="./img/address_c_icon.png" width="15" height="20" alt="">
+							</span>
+							<p>Барнаул, ул. Cиликатная, 19, офис 305-306</p>
+						</li>
+						<li>
+							<span>
+								<img src="./img/phone_c_icon.png" width="17" height="19" alt="">
+							</span>
+							<p>+7 (3852) 500-458</p>
+						</li>
+						<li>
+							<span>
+								<img src="./img/email_c_icon.png" width="19" height="14" alt="">
+							</span>
+							<p><a href="#">info@glacor.com</a></p>
+						</li>
+					</ul>
+				</div>
+				<div class="feedback">
+					<h3>Обратная связь</h3>
+					<p><input type="text" placeholder="Ваше имя"></p>
+					<p><input type="text" placeholder="Электронная почта"></p>
+					<p><textarea cols="60" rows="8" placeholder="Сообщение"></textarea></p>
+					<button>Отправить</button>
+					<h6>Все поля должны быть заполнены</h6>
+				</div>
+			</div>
+		</main>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<ul>
+			<li><a href="#">Каталог продукции</a></li>
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+		<p>© 2015 Glacor Inc. Поставщик медицинского оборудования и медтехники в России</p>
+		<h5>Сделано в <a href="#">BORA</a></h5>
+	</footer>
+	<script src="./js/easing.js"></script>
+	<script src="./js/jcarousel.js"></script>
+	<script src="./js/mobile.js"></script>
+	<script src="./js/slides.js"></script>
+	<script src="./js/dynamic.js"></script>
+</body>
+</html>
