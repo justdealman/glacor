@@ -483,6 +483,9 @@ header ul li.active a {
 	text-overflow:clip;
 	white-space:normal;
 }
+.catalog ul li:hover h5:hover span {
+	border-bottom:1px solid transparent;
+}
 .catalog ul li p {
 	color:#ffffff;
 	font-size:15px;
@@ -681,6 +684,13 @@ footer h5 a {
 	margin:0 17px 17px 0;
 	background:#ffffff;
 	border:2px solid #eeeeee;
+	transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+.basket ul li:hover {
+	border:2px solid #d0d0d0;
 }
 .basket ul li:after {
 	content:'';
@@ -746,7 +756,18 @@ footer h5 a {
 	width:20px;
 	height:20px;
 	cursor:pointer;
-	background:url('../img/remove_icon.png') no-repeat center center;
+	background:url('../img/remove_icon.png') no-repeat left top;
+	transition:transform 0.2s ease-in-out;
+	-webkit-transition:-webkit-transform 0.2s ease-in-out;
+	-moz-transition:-moz-transform 0.2s ease-in-out;
+	-o-transition:-o-transform 0.2s ease-in-out;
+}
+.basket ul li .remove:hover {
+	background-position:0 -20px;
+	transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
 }
 .form {
 	position:relative;
@@ -771,6 +792,13 @@ footer h5 a {
 	padding:9px 31px 8px 13px;
 	background:#ffffff;
 	border:1px solid #d4d4d4;
+	transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+.form p input:focus, .form p textarea:focus {
+	border:1px solid #9b9b9b;
 }
 .form p textarea {
 	resize:vertical;
@@ -790,6 +818,16 @@ footer h5 a {
 	padding:15px 32px 12px;
 	margin:1px 17px 13px 0;
 	background:#844e9a;
+	transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+.form button:hover {
+	background:#9b5cb5;
+}
+.form button:active {
+	background:#744388;
 }
 .form h6 {
 	display:inline-block;
@@ -932,6 +970,13 @@ footer h5 a {
 	margin:2px 16px 15px 0;
 	background:transparent;
 	border:2px solid #b697c2;
+	transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+.feedback button:hover {
+	border:2px solid #ffffff;
 }
 .feedback h6 {
 	display:inline-block;
@@ -1279,10 +1324,10 @@ footer h5 a {
 	top:50%;
 	z-index:20;
 	display:block;
-	width:42px;
-	height:29px;
+	width:30px;
+	height:19px;
 	cursor:pointer;
-	margin-top:-14px;
+	margin-top:-9px;
 	opacity:0.5;
 	transition:all 0.2s ease-in-out;
 	-webkit-transition:all 0.2s ease-in-out;
@@ -1290,12 +1335,12 @@ footer h5 a {
 	-o-transition:all 0.2s ease-in-out;
 }
 .similar .jcarousel-container .jcarousel-prev {
-	left:-60px;
+	left:-50px;
 	background:url('../img/carousel_arrows.png') no-repeat left top;
 }
 .similar .jcarousel-container .jcarousel-next {
-	right:-60px;
-	background:url('../img/carousel_arrows.png') no-repeat left -29px;
+	right:-50px;
+	background:url('../img/carousel_arrows.png') no-repeat left -19px;
 }
 .similar .jcarousel-container .jcarousel-prev:hover, .similar .jcarousel-container .jcarousel-next:hover {
 	opacity:1;
